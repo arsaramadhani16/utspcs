@@ -10,7 +10,7 @@ class Profile extends StatelessWidget {
         title: Text('Profile'),
         actions: [
           IconButton(
-            icon: Icon(Icons.settings_input_antenna),
+            icon: Icon(Icons.person),
             onPressed: () {},
           ),
         ],

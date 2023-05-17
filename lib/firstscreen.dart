@@ -24,26 +24,28 @@ class firstscreen extends StatelessWidget {
         backgroundColor: Colors.red,
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
+            Text("SELAMAT DATANG DI APIKASI WOTA48"),
           SizedBox(
-            height: 15,
+            height: 30,
           ),
-          ElevatedButton(
+          IconButton(
+            icon: Icon(Icons.person),
             onPressed: () {
               _navigatescreen(context);
-              // Navigator.pushNamed(context, '/profile');
             },
-            child: Text('Menuju Layar Profile')),
+          ),
           SizedBox(
             height: 15,
           ),
-          ElevatedButton(
+          IconButton(
+            icon: Icon(Icons.home),
             onPressed: () {
-              Navigator.pushNamed(context, '/beranda', arguments: 'Selamat Datang ke Layar Beranda');
+              Navigator.pushNamed(context, '/beranda', arguments: 'Foto Oshi');
             },
-            child: Text('Menuju Layar Beranda'))
+          ),
          ],
         ),
       ),

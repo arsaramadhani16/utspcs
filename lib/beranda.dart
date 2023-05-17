@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Beranda extends StatelessWidget {
   final String data;
-  const Beranda({super.key, required this.data});
+  const Beranda({Key? key, required this.data}) : super(key: key);
 
-  @override 
-  Widget build(BuildContext context){
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("layar Beranda"),
+        title: Text("Beranda"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {},
+          ),
+        ],
         backgroundColor: Colors.greenAccent,
       ),
       body: Center(
@@ -16,11 +23,32 @@ class Beranda extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(data),
+          SizedBox(
+            height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset('assets/image/freya1.jpg',
+                    height: 350.0,
+                  ),
+                  Image.asset('assets/image/freya2.jpg',
+                    height: 350.0,
+                  ),
+                  Image.asset('assets/image/freya3.jpg',
+                    height: 350.0,
+                  ),
+                ],
+              ),
+          SizedBox(
+            height: 15,
+          ),
             ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Text("Kembali"))
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Kembali"),
+            ),
           ],
         ),
       ),

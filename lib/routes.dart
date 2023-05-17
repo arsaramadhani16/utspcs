@@ -6,8 +6,8 @@ class RouteGenerator{
   static Route<dynamic> generateRoute(RouteSettings settings){
     final args = settings.arguments;
     switch (settings.name) {
-      case '/profile':
-       return MaterialPageRoute(builder: (_) => Profile());
+      // case '/profile':
+      //  return MaterialPageRoute(builder: (_) => Profile());
       case '/beranda':
        if(args is String){
         return MaterialPageRoute(builder: (_) => Beranda(data: args));
